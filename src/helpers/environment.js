@@ -1,5 +1,6 @@
 let APIURL = '';
 
+console.log(window.location.host)
 switch (window.location.hostname) {
     // this is the local host name of your react app
     case 'localhost' || '127.0.0.1':
