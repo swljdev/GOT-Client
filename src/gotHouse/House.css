@@ -1,0 +1,12 @@
+.createHouse {
+    height: 100%;
+    background-image: url("../assets/Lannister_crest.png"); 
+    height: 100vh; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    /* background-size: cover;  */
+    position: absolute;
+    
+    }
+
+
