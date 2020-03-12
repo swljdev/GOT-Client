@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import APIURL from '../helpers/environment'
 
 const HouseEdit = (props) => {
     const [editName, setEditName] = useState(props.houseToUpdate.name);
@@ -8,7 +9,7 @@ const HouseEdit = (props) => {
 
     const houseUpdate = (event, house) => {
     event.preventDefault();
-    fetch(`http://localhost:3001/house/update/${props.houseToUpdate.id}`, {
+    fetch(`${APIURL}house/update/${props.houseToUpdate.id}`, {
         method: 'PUT',
         body: JSON.stringify({name: editName, motto: editMotto, crest: editCrest}),
         headers: new Headers({

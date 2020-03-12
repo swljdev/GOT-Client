@@ -1,5 +1,6 @@
  import React, {useState, useEffect} from 'react';
  import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+ import APIURL from '../helpers/environment'
  
 
  const HouseCreate = (props) => {
@@ -9,7 +10,7 @@
 
      const handleSubmit = (e) => {
          e.preventDefault();
-         fetch('http://localhost:3001/house', {
+         fetch(`${APIURL}house`, {
              method: 'POST',
              body: JSON.stringify ({name:name, motto:motto, crest:crest}),
              headers: new Headers({

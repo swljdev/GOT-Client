@@ -5,6 +5,7 @@ import HouseTable from './HouseTable'
 import HouseEdit from './HouseEdit';
 //import CrestGrid from './CrestGrid'
 import './House.css'
+import APIURL from '../helpers/environment'
 
 
 
@@ -15,7 +16,7 @@ const HouseIndex = (props) => {
 
     const fetchHouses = () => {
         
-        fetch('http://localhost:3001/house', {
+        fetch(`${APIURL}house`, {
             method: "GET",
             headers: new Headers ({
                 'Content-Type': 'application/json',
