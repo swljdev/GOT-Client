@@ -9,6 +9,7 @@ const Signup = (props) => {
 
 const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(APIURL)
     fetch(`${APIURL}api/user/createuser`, {
         method: 'POST', 
         body: JSON.stringify({user: {username: username, password: password}}),
